@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/angular/projects",
   "dependencies": {
-    "hookshot": "0.0.2"
+    "hookshot": "0.0.2",
+    "di": "~2.0.0-pre-1",
+    "requirejs": "~2.1.10",
+    "DOMFuture": "git://github.com/slightlyoff/Promises"
+  },
+  "devDependencies": {
+    "pipe": "git://github.com/angular/pipe"
   }
 }

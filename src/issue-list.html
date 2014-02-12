@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="fsa-issue-list" noscript>
+  <template>
+    <ul>
+      <template repeat="{{ issue in issues }}">
+        {{ issue.title }}
+      </template>
+    </ul>
+  </template>
+
+  <script>
+    Polymer('fsa-issue-list', {
+      ready: function() {
+        console.log('ready')
+      }
+    });
+  </script>
+</polymer-element>

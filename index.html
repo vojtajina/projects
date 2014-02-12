@@ -5,9 +5,32 @@
     <title>Angular 2 App</title>
     <meta name="description" content="A Github client.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="import" href="./src/issue-list.html">
   </head>
   <body>
-    <img src="AngularJS-large.png">
-    Under Construction!!
+    <fsa-issue-list></fsa-issue-list>
+
+    <!-- Traceur runtime -->
+    <script src="./node_modules/di/node_modules/traceur/bin/traceur-runtime.js"></script>
+    <!-- Map shim -->
+    <script src="./node_modules/di/node_modules/es6-shim/es6-shim.js"></script>
+    <!-- RequireJS -->
+    <script src="./node_modules/requirejs/require.js"></script>
+
+    <script src="./bower_components/platform/platform.js"></script>
+    <script src="./bower_components/polymer/polymer.js"></script>
+    <script src="./node_modules/DOMFuture/src/Promise.js"></script>
+
+    <script>
+
+      require.config({
+        baseUrl: './compiled',
+        paths: {
+          'di': '../node_modules/di/dist/amd/'
+        },
+        deps: ['main']
+      });
+
+    </script>
   </body>
 </html>
