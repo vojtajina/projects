@@ -1,0 +1,12 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="fsa-issue-item" attributes="issue">
+  <template>
+    Issue: <strong>{{issue.title}}</strong>
+    <a href="{{issue.html_url}}">link</a>
+  </template>
+
+  <script>
+    VojtaPolymer('fsa-issue-item', './issue-item:IssueItemController');
+  </script>
+</polymer-element>
