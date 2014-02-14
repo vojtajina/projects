@@ -6,11 +6,9 @@ export class IssueDetailController {
   constructor(github) {
     console.log('issue detail controller')
     this.github = github;
-    this.issue = {title: 'FAKE'}
     this.organization = 'angular';
     this.repo = 'di.js';
-    this.displayLoading = '';
-    this.displayNotLoading = 'none';
+    this.isLoaded = false;
   }
 
   ready() {}
@@ -29,7 +27,6 @@ export class IssueDetailController {
   }
 
   hideLoadingMessage() {
-    this.displayLoading = 'none';
-    this.displayNotLoading = '';
+    this.isLoaded = true;
   }
 }

@@ -9,7 +9,7 @@ export class IssueListController {
     this.issues = [];
     this.organization = 'angular';
     this.repo = 'di.js';
-    this.displayLoading = '';
+    this.isLoaded = false;
   }
 
   ready() {
@@ -21,6 +21,6 @@ export class IssueListController {
   }
 
   hideLoadingMessage() {
-    this.displayLoading = 'none';
+    this.isLoaded = true;
   }
 }

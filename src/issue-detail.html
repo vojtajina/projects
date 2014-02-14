@@ -1,11 +1,13 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link href="./message.html" rel="import">
+
 <base href="/">
 
 <polymer-element name="fsa-issue-detail" attributes="number">
   <template>
     <a href="#/list">back to list</a>
-    <span style="display:{{displayLoading}}">Loading the issue...</span>
-    <div style="display:{{displayNotLoading}}">
+    <fsa-message text="Loading the issue..." hide="{{isLoaded}}"></fsa-message>
+    <div hidden?="{{isLoaded == false}}">
       <h3>Issue {{issue.title}}</h3>
       <p>{{issue.body}}</p>
       <hr>

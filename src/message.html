@@ -1,0 +1,11 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="fsa-message" attributes="show hide text">
+  <template>
+    <span style="display:{{displayValue}}">{{text}}</span>
+  </template>
+
+  <script>
+    VojtaPolymer('fsa-message', './message:MessageController');
+  </script>
+</polymer-element>
