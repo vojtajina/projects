@@ -31,4 +31,9 @@ export class GitHub {
   getIssues(organization, repoName) {
     return this.httpGet(`https://api.github.com/repos/${organization}/${repoName}/issues?client_id=${this.clientId}&client_secret=${this.clientSecret}`);
   }
+
+  getIssueDetail(organization, repoName, number) {
+    return this.httpGet(`https://api.github.com/repos/${organization}/${repoName}/issues/${number}?client_id=${this.clientId}&client_secret=${this.clientSecret}`);
+  }
+
 }

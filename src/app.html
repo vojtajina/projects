@@ -1,0 +1,22 @@
+<link href="../bower_components/polymer/polymer.html" rel="import">
+<link href="./router.html" rel="import">
+<link href="./issue-list.html" rel="import">
+<link href="./issue-detail.html" rel="import">
+
+<polymer-element name="fsa-app">
+  <template>
+    <fsa-router route="{{route}}"></fsa-router>
+
+    <template if="{{route.component == 'fsa-issue-list'}}">
+      <fsa-issue-list></fsa-issue-list>
+    </template>
+
+    <template if="{{route.component == 'fsa-issue-detail'}}">
+      <fsa-issue-detail number="{{route.issueId}}"></fsa-issue-detail>
+    </template>
+  </template>
+
+  <script>
+    Polymer('fsa-app', {});
+  </script>
+</polymer>

@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<base href="/">
+
+<polymer-element name="fsa-issue-detail" attributes="number">
+  <template>
+    <a href="#/list">back to list</a>
+    <span style="display:{{displayLoading}}">Loading the issue...</span>
+    <div style="display:{{displayNotLoading}}">
+      <h3>Issue {{issue.title}}</h3>
+      <p>{{issue.body}}</p>
+      <hr>
+      Created by <strong>{{issue.user.login}}</strong> at {{issue.created_at}}
+    </div>
+  </template>
+
+  <script>
+    VojtaPolymer('fsa-issue-detail', './issue-detail:IssueDetailController');
+  </script>
+</polymer-element>
